@@ -14,11 +14,13 @@ namespace WebApplication8
         SqlConnection cn;
         protected void Page_Load(object sender, EventArgs e)
         {
-            cn = new SqlConnection(@"Server=4885d5d6-69ef-4025-905e-a429009c850d.sqlserver.sequelizer.com;Database=db4885d5d669ef4025905ea429009c850d;User ID=fbistyiiwhigoiui;Password=NVzam2RZay8WuMiEMjeapoa4KGvsLhFNYPrtWfcstBQu8D8ojWJwpWezVDxLExo2;");
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            
+            cn = new SqlConnection(@"Server=4885d5d6-69ef-4025-905e-a429009c850d.sqlserver.sequelizer.com;Database=db4885d5d669ef4025905ea429009c850d;User ID=fbistyiiwhigoiui;Password=NVzam2RZay8WuMiEMjeapoa4KGvsLhFNYPrtWfcstBQu8D8ojWJwpWezVDxLExo2;");
             cmd = new SqlCommand("insert into userinfo values(@a,@b)", cn);
             cmd.Parameters.AddWithValue("@a", TextBox1.Text);
             cmd.Parameters.AddWithValue("@b", TextBox2.Text);
